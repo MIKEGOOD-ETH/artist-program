@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const maxSymbols = 1000; // Maximum number of symbols allowed on screen
+    const maxSymbols = window.innerWidth < 600 ? 120 : 1000; // Adjust the threshold and maximum symbols as needed
     const twinklingStars = document.getElementById('twinklingStars');
     const viewToggle = document.getElementById('viewToggle');
     const galleryWrapper = document.getElementById('galleryWrapper');
