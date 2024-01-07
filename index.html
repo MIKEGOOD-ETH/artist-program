@@ -15,39 +15,40 @@
 
     -->
 
+    
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Perpetual Artist Program" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://artistprogram.org/images/featured-artist-prog.png" />
+    <meta property="og:image" content="http://artistprogram.org/images/featured-image-01.png" />
     <meta property="og:description" content="The Perpetual Artist Program provides small grants to artists creating artwork released directly into the public domain under the Creative Commons cc0 license. Eligible artists can receive funding up to 1 ETH. Participants are also awarded a Nounish pfp, symbolizing their contribution to the project and Nouns community. Interested in applying?" />
     <meta property="og:url" content="https://www.artistprogram.org" />
+
     <title>Nouns Artist Program</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="container">
-        
-        <div class="submissions-status">
-            <span class="submissions-closed">🚫 Submissions Currently Closed</span>
+
+                <div class="submissions-status">
+            <span class="submissions-closed">🚫 Submissions Currently Closed. 
+
+
+<a href="#" id="open-popup-link" data-popup-target="#popup-container">Learn more about the program.</a>
+    
+    <div id="popup-container">
+        <div id="popup-content">
+            <p>Welcome, Anon!<br><br>
+The Perpetual Artist Program provides small grants to artists creating artwork released directly into the public domain under the Creative Commons cc0 license. Eligible artists can receive funding up to 1 ETH. Participants are also awarded a Nounish pfp, symbolizing their contribution to the project and Nouns community. Interested in applying? More info coming soon.</p>
+            <button id="close-popup">Close</button>
         </div>
-        <br>
-        <h1><span><sup><i>the</i></sup><br> Perpetual Artist Program<sup>⌐◨-◨</sup></span></h1>
-            <br>
-            <br>
-
-        <p class="intro">
-            Welcome, Anon!
-            <br>
-            The Perpetual Artist Program provides small grants to artists creating artwork released directly into the public domain under the Creative Commons <a href="https://creativecommons.org/public-domain/cc0/">cc0 license</a>. Eligible artists can receive funding up to 1 ETH. Participants are also awarded a Nounish pfp, symbolizing their contribution to the project and Nouns community.             Interested in applying? <a href="">More info coming soon</a>.
-
-       </p>
-     
-        <br>
-        <br>
+    </div>
+            </span>
+        </div>
+        <header>
+        <div class="container">
+        <h1><span>Perpetual Artist Program<sup>⌐◨-◨</sup></span></h1>
             <div class="switch-container">
                     <span class="switch-label left">
                     <img src="images/gallery-layout-icon.png" alt="gallery view">
@@ -60,9 +61,16 @@
                         <img src="images/grid-layout-icon.png" alt="grid view"> w/artist info
                     </span>
                 </div>
-        
-        <br>
-        <br>
+            </div>
+    </header>
+
+
+
+<body>
+    <div class="big-container">
+
+
+
 
         <div id="galleryWrapper" class="flex-view">
         <div class="gallery">
@@ -394,10 +402,6 @@
         </div> <!-- End of Gallery -->
             
         </div> <!-- End of Gallery Wrapper -->
-
-    <div class="twinkling-stars" id="twinklingStars">
-        <!-- Stars will be dynamically created here using JavaScript -->
-    </div>
 
         <div class="footer-status">
             <span class="footer-text">Powered by the lint mafia<img class="footer-logo" src="images/lint-logo.png" alt="lint">
