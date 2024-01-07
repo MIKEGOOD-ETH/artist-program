@@ -1,33 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const maxSymbols = window.innerWidth < 600 ? 120 : 1000; // Adjust the threshold and maximum symbols as needed
-    const twinklingStars = document.getElementById('twinklingStars');
     const viewToggle = document.getElementById('viewToggle');
     const galleryWrapper = document.getElementById('galleryWrapper');
-
-    function getRandomNumber(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-
-    function createRandomSymbol() {
-        const symbol = document.createElement('div');
-        symbol.className = 'twinkle';
-        symbol.textContent = '⌐◨-◨';
-        symbol.style.left = `${getRandomNumber(0, 100)}%`;
-        symbol.style.top = `${getRandomNumber(0, 100)}%`;
-        symbol.style.fontSize = `${getRandomNumber(10, 30)}px`;
-
-        twinklingStars.appendChild(symbol);
-
-        // Remove the oldest symbol if the maximum count is exceeded
-        if (twinklingStars.childNodes.length > maxSymbols) {
-            twinklingStars.removeChild(twinklingStars.firstChild);
-        }
-    }
-
-    // Continuously add new symbols
-    setInterval(function() {
-        createRandomSymbol();
-    }, 20); // Adjust the interval as needed
 
     // Initialize the toggle switch based on current view
     viewToggle.checked = true; // Set it to true for Grid View by default
@@ -52,5 +25,34 @@ document.addEventListener('DOMContentLoaded', function() {
     links.forEach(link => {
         link.setAttribute('target', '_blank');
     });
+});
+
+// Get the popup and link elements by their IDs
+const popupContainer = document.getElementById('popup-container');
+const openPopupLinks = document.querySelectorAll('[data-popup-target]');
+const closePopupButton = document.getElementById('close-popup');
+
+// Open the popup when a specific link is clicked
+openPopupLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default behavior of navigating to a new page
+        const targetPopupId = link.getAttribute('data-popup-target');
+        const targetPopup = document.querySelector(targetPopupId);
+        if (targetPopup) {
+            targetPopup.style.display = 'flex'; // Display the popup
+        }
+    });
+});
+
+// Close the popup when the close button is clicked
+closePopupButton.addEventListener('click', () => {
+    popupContainer.style.display = 'none'; // Hide the popup
+});
+
+// Close the popup when clicking outside of it
+window.addEventListener('click', (event) => {
+    if (event.target === popupContainer) {
+        popupContainer.style.display = 'none';
+    }
 });
 
