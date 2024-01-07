@@ -56,3 +56,38 @@ window.addEventListener('click', (event) => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBar = document.getElementById('searchBar');
+    const sortSelect = document.getElementById('sortSelect');
+    const gallery = document.querySelector('.gallery');
+    const imageContainers = Array.from(document.querySelectorAll('.image-container'));
+
+    // Function to sort images
+    function sortImages() {
+        const sortedImages = imageContainers.sort((a, b) => {
+            const dateA = new Date(a.getAttribute('data-date'));
+            const dateB = new Date(b.getAttribute('data-date'));
+            return sortSelect.value === 'newest' ? dateB - dateA : dateA - dateB;
+        });
+        // Clear existing images and append sorted images
+        gallery.innerHTML = '';
+        sortedImages.forEach(image => gallery.appendChild(image));
+    }
+
+    // Event listener for search functionality
+    searchBar.addEventListener('input', function(e) {
+        const searchQuery = e.target.value.toLowerCase();
+        imageContainers.forEach(image => {
+            const artistName = image.querySelector('.artist-name').textContent.toLowerCase();
+            const artTitle = image.querySelector('.art-title').textContent.toLowerCase();
+            image.style.display = artistName.includes(searchQuery) || artTitle.includes(searchQuery) ? '' : 'none';
+        });
+    });
+
+    // Event listener for sort functionality
+    sortSelect.addEventListener('change', sortImages);
+
+    // Initial sort
+    sortImages();
+});
+
