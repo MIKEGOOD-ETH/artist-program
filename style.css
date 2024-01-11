@@ -1,7 +1,7 @@
-/* General Styles */
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
 
 body {
     font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@ h1 a:visited {
 }
 
 sup {
-    font-family: 'Arial', Arial, sans-serif; 
+
     font-size: 50%; 
     vertical-align: super; 
 }
@@ -41,8 +41,8 @@ sup {
     text-align: center;
     background-color: #1F1D29; 
     color: white; 
-    padding: 10px; 
-    font-weight: bold; 
+    padding: 5px; 
+
 }
 
 .submissions-closed {
@@ -53,7 +53,7 @@ sup {
     text-align: center;
     background-color: #1F1D29; 
     color: white; 
-    padding: 10px; 
+    padding: 5px; 
     margin-top: 5px;
 }
 
@@ -75,23 +75,24 @@ header {
     color: #1F1D29;
     padding-left: 1rem;
     padding-right: 1rem;
-
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
-    z-index: 1000; /* Make sure it's above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 h1 {
-    font-family: 'Press Start 2P', 'Arial', sans-serif;
+
+    font-family: 'Nunito', sans-serif;
     max-width: 600px; 
     text-align: left; 
     color: #1F1D29;
@@ -105,12 +106,10 @@ h1 span {
 .big-container {
     max-width: 100%;
     margin: auto;
-
     padding: 10px;
 }
 
 #viewToggle {
-    margin: 10px auto; 
     display: block; 
 }
 
@@ -430,7 +429,6 @@ input:checked + .slider:before {
 header {
     background-color: #EFF2FA;
     color: #1F1D29;
-    padding-top: .4rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
