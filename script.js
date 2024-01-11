@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryWrapper = document.getElementById('galleryWrapper');
 
     // Initialize the toggle switch based on current view
-    viewToggle.checked = true; // Set it to true for Grid View by default
+    viewToggle.checked = false; // Set it to true for Grid View by default
 
     // Set the initial view to Grid View
-    galleryWrapper.classList.add('grid-view');
-    galleryWrapper.classList.remove('flex-view');
+    galleryWrapper.classList.remove('grid-view');
+    galleryWrapper.classList.add('flex-view');
 
     // Event listener for the toggle switch
     viewToggle.addEventListener('change', function() {
