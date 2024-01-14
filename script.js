@@ -1,3 +1,12 @@
+function toggleMenu() {
+    var navbar = document.getElementById("navbar");
+    if (navbar.style.display === "block") {
+        navbar.style.display = "none";
+    } else {
+        navbar.style.display = "block";
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const viewToggle = document.getElementById('viewToggle');
     const galleryWrapper = document.getElementById('galleryWrapper');
@@ -90,4 +99,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial sort
     sortImages();
 });
-
