@@ -133,7 +133,15 @@ h1 {
     margin-bottom: 5px;
 }
 
+.mint-link {
+    display: block;
+    width: 100%; /* Take full width */
+    text-align: center; /* Center the button */
+}
+
 .profile-button {
+    width: calc(100% - 10px); 
+    margin: 5px; 
     background-color: #1F1D29;
     color: white;
     border: none;
