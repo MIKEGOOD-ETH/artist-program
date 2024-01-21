@@ -21,6 +21,11 @@ body {
     font-size: 1em;
 }
 
+.mint-link {
+    display: block;
+    width: 100%; /* Take full width */
+    text-align: center; /* Center the button */
+}
 
 a:link, a:visited {
     color: inherit; 
@@ -131,12 +136,6 @@ h1 {
     color: #76858B;
     font-size: 0.8em;
     margin-bottom: 5px;
-}
-
-.mint-link {
-    display: block;
-    width: 100%; /* Take full width */
-    text-align: center; /* Center the button */
 }
 
 .profile-button {
