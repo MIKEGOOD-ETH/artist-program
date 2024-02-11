@@ -52,6 +52,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 0 1rem;
+
 }
 
 
@@ -91,7 +92,7 @@ header {
 }
 
 h1 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'PT Serif', serif;
     max-width: 600px; 
     text-align: left; 
     color: #1F1D29;
@@ -406,57 +407,6 @@ footer {
     height: auto;
 }
 
-/* Coming soon Popup Formatting */
-/* Coming soon Popup Formatting */
-/* Coming soon Popup Formatting */
-/* Coming soon Popup Formatting */
-
-#popup-container {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 1em;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-
-}
-
-/* Styling for the popup content */
-#popup-content {
-
-    font-family: Arial, sans-serif;
-    font-size: 1.5em;
-    color: #1F1D29; 
-    max-width: 600px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    text-align: left; 
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-    line-height: 1.2; 
-
-}
-
-/* Style the close button */
-#close-popup {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-
-
-
-
 /* Formatting for smaller screen sizes below */
 /* Formatting for smaller screen sizes below */
 /* Formatting for smaller screen sizes below */
@@ -483,6 +433,7 @@ footer {
     .director-container {
 
         align-items: left; 
+        justify-content: flex-start;
     }
 
 
@@ -498,10 +449,7 @@ footer {
 
 
 
-    .director-container {
 
-        align-items: left; 
-    }
 
 
     .hamburger-menu {
@@ -517,14 +465,17 @@ footer {
         height: auto; /* Maintain aspect ratio */
     }
 
-    .director-image, .artist-profile img {
-        width: 60px; /* Adjust image sizes for director and artist profiles */
+    .artist-profile img {
         height: auto; /* Maintain aspect ratio */
     }
 
-    .about-page-button, #popup-content, #close-popup {
-        font-size: smaller; /* Adjust button and popup font sizes for readability */
-    }
+    .director-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20%; 
+}
+
+
 
     .social-links img {
         width: 20px; /* Adjust social link icon sizes */
@@ -534,11 +485,13 @@ footer {
 
     /* Director and Artist profiles larger or side by side */
     .director-profile, .artist-profile {
-        width: 20%; /* Adjust for two profiles side by side */
+        width: 40%; /* Adjust for two profiles side by side */
         margin: 1%; /* Small margin for spacing */
     }
 
-
+    .about-page-button, .about-page-button:visited {
+        color: #fff; /* Ensure light text color */
+    }
 
 
 
