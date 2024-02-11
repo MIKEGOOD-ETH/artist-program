@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+body {
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    background-color: #1F1D29;
+}
+
+/* General Formatting */
+/* General Formatting */
+/* General Formatting */
+/* General Formatting */
+
+a:link, a:visited {
+    color: inherit; 
+}
+
+sup {
+    font-size: .7rem;
+}
+
+h1 {
+    color: #1F1D29;
+}
+
+/* TOP Submission Status Bar Formatting */
+/* TOP Submission Status Bar Formatting */
+/* TOP Submission Status Bar Formatting */
+/* TOP Submission Status Bar Formatting */
+
+.submissions-status {
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    background-color: #1F1D29;
+    color: white;
+    padding: 5px;
+}
+
+.submissions-closed {
+    font-size: 1em;
+}
+
+header {
+    font-family: 'Nunito', sans-serif;
+    position: sticky;
+    top: 0;
+    color: #1F1D29;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2); 
+    border-top: 4px solid #1F1D29; 
+    z-index: 1000; 
+}
+
+.header-banner {
+    width: 340px; 
+    height: auto; 
+    vertical-align: center; 
+}
+
+.faba-header-banner {
+    width: 500px; 
+    height: auto; 
+    vertical-align: center; 
+}
+
+.header-link {
+    height: 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #1F1D29;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Container and Text Section formatting */
+/* Container and Text Section formatting */
+/* Container and Text Section formatting */
+/* Container and Text Section formatting */
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.content-block {
+    display: flex;
+    align-items: flex-end; 
+    background-color: #FDF8FF;
+}
+
+.text-section {
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.text-section-artist-page {
+    max-width: 520px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.text-section hr {
+    border: none;
+    height: 1px;
+    margin: 10px 0;
+    width: 100%; 
+    background-color: #76858B;
+}
+
+
+/* FAQ Accordian Menu's */
+/* FAQ Accordian Menu's */
+/* FAQ Accordian Menu's */
+/* FAQ Accordian Menu's */
+
+.accordion-button {
+    background-color: #EFF2FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts content to start and end */
+    cursor: pointer;
+    padding: 0px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: 'PT Serif', serif;
+}
+
+.accordion-button:after {
+    content: '\002B'; /* Plus symbol */
+    font-size: 20px; /* Adjust size as needed */
+    line-height: 0; /* Adjust line-height for vertical alignment */
+    margin-left: 20px; /* Space between text and symbol */
+    transition: transform 0.2s; /* Smooth transform */
+}
+
+.accordion-button.active:after {
+    content: "\2212"; /* Unicode character for "-" sign */
+    transform: rotate(0deg); /* Adjust rotation if desired */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #EFF2FA;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/* About and Round Page List Numbers */
+/* About and Round Page List Numbers */
+/* About and Round Page List Numbers */
+/* About and Round Page List Numbers */
+
+.steplist {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  counter-reset: step-counter; /* Create a counter for numbering */
+  padding-left: 25px; /* Add padding to the left of the list for alignment */
+  padding-top: 10px;
+}
+
+.steplist li {
+  counter-increment: step-counter; /* Increment the counter */
+  margin-bottom: 15px; /* Add space between list items */
+  font-size: 16px; /* Set the base font size */
+  line-height: 1.5; /* Set the line height */
+  position: relative; /* Needed to position the pseudo-element */
+  padding-left: 20px; /* Add padding to align text nicely */
+    padding-bottom: 10px;
+    max-width: 500px;
+}
+
+.steplist li::before {
+  content: counter(step-counter) ".";
+  position: absolute; /* Position it absolutely within the li */
+  left: -20px; /* Adjust left position for new padding */
+  font-size: 32px; /* Make the number larger */
+  line-height: 32px; /* Set the line height to match the height of two lines of text */
+  font-weight: bold; /* Make it bold */
+}
+
+
+/* About section formatting */
+/* About section formatting */
+/* About section formatting */
+/* About section formatting */
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #EFF2FA;
+}
+
+.about-content {
+    max-width: 600px; /* Adjust as necessary for your design */
+    text-align: left;
+}
+
+.about-content h1 {
+    margin-top: 20px;
+}
+
+.about-content p, .about-content .funding-info, .coming-soon {
+    margin-bottom: 20px;
+}
+
+.about-page-button, .about-page-button:visited {
+    color: #fffdf2; /* Light color */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F1D29;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+}
+
+.about-page-button:hover {
+    color: #1F1D29;
+    background-color: #D8DADF;
+    box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.40);
+}
+
+
+/* Footer Formatting */
+/* Footer Formatting */
+/* Footer Formatting */
+/* Footer Formatting */
+
+footer {
+    display: flex;
+    padding: 10px;
+    background: #1F1D29;
+    color: #fff;
+    justify-content: center;
+}
+
+.footer-text {
+    font-size: 1em; 
+
+}
+
+.footer-logo {
+    width: 20px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 5px; 
+}
+
+/* General Page Navigation formatting: Nav Bar + Menu */
+/* General Page Navigation formatting: Nav Bar + Menu */
+/* General Page Navigation formatting: Nav Bar + Menu */
+/* General Page Navigation formatting: Nav Bar + Menu */
+
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 1.6rem;
+    /* Additional styling */
+}
+
+.navbar {
+    opacity: 0.8;
+    display: none;
+    position: absolute;
+    right: 0; 
+    top: 100%; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+    width: 200px; 
+    z-index: 1000; 
+}
+
+.navbar.show {
+    display: block;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 15px;
+    color: #000; 
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #f2f2f2; 
+}
+
+/* About Page: Director Profile section formatting */
+/* About Page: Director Profile section formatting */
+/* About Page: Director Profile section formatting */
+/* About Page: Director Profile section formatting */
+
+.director-profiles-section {
+    background-color: #EFF2FA; 
+    padding: 20px 0;
+}
+
+.director-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.director-profile {
+    width: 30%; 
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.director-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20%; 
+    margin-bottom: 10px;
+}
+
+.director-name {
+    margin: 5px 0;
+    color: #1F1D29; 
+}
+
+/* Artit Page Profile section formatting */
+/* Artit Page Profile section formatting */
+/* Artit Page Profile section formatting */
+/* Artit Page Profile section formatting */
+
+
+.artist-profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.artist-profile-content h1 {
+    text-align: left;
+}
+
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.artist-profile {
+    width: 18%; 
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Artit & Director Profile Social Link Formatting */
+/* Artit & Director Profile Social Link Formatting */
+/* Artit & Director Profile Social Link Formatting */
+/* Artit & Director Profile Social Link Formatting */
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 15px; 
+    height: auto;
+}
+
+/* Coming soon Popup Formatting */
+/* Coming soon Popup Formatting */
+/* Coming soon Popup Formatting */
+/* Coming soon Popup Formatting */
+
+#popup-container {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Styling for the popup content */
+#popup-content {
+
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    color: #1F1D29; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: left; 
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    line-height: 1.2; 
+
+}
+
+/* Style the close button */
+#close-popup {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Formatting for smaller screen sizes below */
+/* Formatting for smaller screen sizes below */
+/* Formatting for smaller screen sizes below */
+/* Formatting for smaller screen sizes below */
+
+
+@media (max-width: 700px) {
+
+    .director-profile {
+        width: 48%; 
+    }
+
+    .header-link {
+        font-size: 1.2rem;
+    }
+
+    .hamburger-menu {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        width: 100%;
+        right: 0;
+    }
+
+    .text-section {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box; 
+        text-align: justify;
+    }
+
+    .artist-name, .medium, .artist-info, .image-use {
+        font-size: 0.9em; 
+    }
+
+    .art-title {
+        font-size: h2;
+    }
+
+    .profile-button {
+        padding: 5px 20px; 
+        font-size: 0.8rem; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .director-profile {
+        width: 100%; 
+    }
+}
+

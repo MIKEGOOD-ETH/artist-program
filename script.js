@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const siteDomain = window.location.hostname; // Get the current site's domain
+    const links = document.querySelectorAll('a'); // Select all links in the document
+
+    links.forEach(function(link) {
+      if (link.hostname !== siteDomain && link.hostname !== '') { // Check if the link is external
+        link.target = '_blank'; // Open in a new tab
+        link.rel = 'noopener noreferrer'; // Security measure
+      }
+    });
+  });
+
+
+
 function toggleMenu() {
     var navbar = document.getElementById("navbar");
     if (navbar.style.display === "block") {
@@ -98,4 +112,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial sort
     sortImages();
+});
+
+
+function toggleAccordion(button) {
+    button.classList.toggle("active");
+    var panel = button.nextElementSibling;
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+    } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+}
+
+// Function to show the popup
+function showPopup() {
+    document.getElementById('comingSoonPopup').style.display = 'block';
+}
+
+// Function to hide the popup
+function hidePopup() {
+    document.getElementById('comingSoonPopup').style.display = 'none';
+}
+
+// Attaching the event listener to the "Apply to Program" button
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.coming-soon-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPopup();
+        });
+    });
 });
