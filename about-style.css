@@ -421,6 +421,14 @@ footer {
         right: 0;
     }
 
+    .header-link {
+        font-size: 1.2rem;
+    }
+
+    .hamburger-menu {
+        font-size: 1.2rem;
+    }
+    
     .about-section {
         padding: 10px; 
     }
@@ -448,17 +456,6 @@ footer {
     }
 
 
-
-
-
-
-    .hamburger-menu {
-        display: block; 
-    }
-
-    .header-link, .about-content, .accordion-button, .panel, .steplist li {
-        font-size: smaller; /* Adjust font size for space efficiency */
-    }
 
     .header-banner, .faba-header-banner {
         width: 80%; /* Adjust image sizes to fit screen width */
@@ -492,6 +489,7 @@ footer {
     .about-page-button, .about-page-button:visited {
         color: #fff; /* Ensure light text color */
     }
+
 
 
 
