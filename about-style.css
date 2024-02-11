@@ -22,8 +22,84 @@ sup {
     font-size: .7rem;
 }
 
-h1 {
+header {
+    font-family: 'Nunito', sans-serif;
+    position: sticky;
+    top: 0;
     color: #1F1D29;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2); 
+    border-top: 4px solid #1F1D29; 
+}
+
+.header-link {
+    height: 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #1F1D29;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 1.6rem;
+    /* Additional styling */
+}
+
+.navbar {
+    opacity: 0.8;
+    display: none;
+    position: absolute;
+    right: 0; 
+    top: 100%; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+    width: 200px; 
+    z-index: 1000; 
+}
+
+.navbar.show {
+    display: block;
+
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 15px;
+    color: #000; 
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #f2f2f2; 
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    max-width: 600px; 
+    text-align: left; 
+    color: #1F1D29;
+}
+
+h1 span {
+    display: inline-block; 
+    text-align: left; 
 }
 
 /* TOP Submission Status Bar Formatting */
@@ -43,20 +119,7 @@ h1 {
     font-size: 1em;
 }
 
-header {
-    font-family: 'Nunito', sans-serif;
-    position: sticky;
-    top: 0;
-    color: #1F1D29;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2); 
-    border-top: 4px solid #1F1D29; 
-    z-index: 1000; 
-}
+
 
 .header-banner {
     width: 340px; 
@@ -70,27 +133,13 @@ header {
     vertical-align: center; 
 }
 
-.header-link {
-    height: 30px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #1F1D29;
-    font-family: 'Nunito', sans-serif;
-}
 
 /* Container and Text Section formatting */
 /* Container and Text Section formatting */
 /* Container and Text Section formatting */
 /* Container and Text Section formatting */
 
-.container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-}
+
 
 .content-block {
     display: flex;
@@ -224,7 +273,7 @@ header {
 }
 
 .about-page-button, .about-page-button:visited {
-    color: #fffdf2; /* Light color */
+    color: #F9F4E6; /* Light color */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -242,7 +291,7 @@ header {
 }
 
 .about-page-button:hover {
-    color: #1F1D29;
+    color: #F9F4E6;
     background-color: #D8DADF;
     box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.40);
 }
@@ -273,44 +322,6 @@ footer {
     margin-left: 5px; 
 }
 
-/* General Page Navigation formatting: Nav Bar + Menu */
-/* General Page Navigation formatting: Nav Bar + Menu */
-/* General Page Navigation formatting: Nav Bar + Menu */
-/* General Page Navigation formatting: Nav Bar + Menu */
-
-.hamburger-menu {
-    cursor: pointer;
-    font-size: 1.6rem;
-    /* Additional styling */
-}
-
-.navbar {
-    opacity: 0.8;
-    display: none;
-    position: absolute;
-    right: 0; 
-    top: 100%; 
-    background-color: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 5px; 
-    width: 200px; 
-    z-index: 1000; 
-}
-
-.navbar.show {
-    display: block;
-}
-
-.navbar a {
-    display: block;
-    padding: 10px 15px;
-    color: #000; 
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #f2f2f2; 
-}
 
 /* About Page: Director Profile section formatting */
 /* About Page: Director Profile section formatting */
@@ -452,27 +463,49 @@ footer {
 /* Formatting for smaller screen sizes below */
 
 
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust base font size for readability */
+@media (max-width: 700px) {
+ 
+
+     .navbar {
+        width: 100%;
+        right: 0;
     }
 
-    .container, .about-section, .artist-profile-content {
-        padding: 10px; /* Reduce padding on smaller screens */
+    .about-section {
+        padding: 10px; 
     }
 
-    .navbar, .director-container, .artist-container {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center-align for a cleaner look */
+    .artist-profile-content {
+        padding: 10px; 
     }
 
-    .navbar a, .director-profile, .artist-profile {
-        width: 100%; /* Full width for easier navigation and consistency */
-        text-align: center; /* Center-align text for better readability */
+    
+    .director-container {
+
+        align-items: left; 
     }
+
+
+     .director-profile {
+        width: 100%; 
+        text-align: left; 
+    }
+
+     .artist-profile {
+        width: 100%; 
+        text-align: left; 
+    }
+
+
+
+    .director-container {
+
+        align-items: left; 
+    }
+
 
     .hamburger-menu {
-        display: block; /* Ensure the hamburger menu is visible */
+        display: block; 
     }
 
     .header-link, .about-content, .accordion-button, .panel, .steplist li {
@@ -498,26 +531,16 @@ footer {
     }
 }
 
-/* Additional media queries for even smaller screens */
-@media screen and (max-width: 480px) {
+
+    /* Director and Artist profiles larger or side by side */
     .director-profile, .artist-profile {
-        width: 100%; /* Full width for profile elements */
+        width: 20%; /* Adjust for two profiles side by side */
+        margin: 1%; /* Small margin for spacing */
     }
 
-    .header-link {
-        font-size: 1.2rem; /* Adjust header link size for better visibility */
+    .about-page-button, .about-page-button:visited {
+        color: #fff; /* Ensure light text color */
     }
 
-    .navbar {
-        width: 100%; /* Full width navbar */
-    }
 
-    .text-section, .artist-name, .medium, .artist-info, .image-use, .art-title {
-        font-size: 0.8em; /* Reduce font size for text elements */
-    }
 
-    .profile-button {
-        padding: 5px 20px; /* Adjust padding for buttons */
-        font-size: 0.8rem; /* Reduce font size for buttons */
-    }
-}
