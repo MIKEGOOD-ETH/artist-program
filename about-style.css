@@ -452,50 +452,72 @@ footer {
 /* Formatting for smaller screen sizes below */
 
 
-@media (max-width: 700px) {
-
-    .director-profile {
-        width: 48%; 
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust base font size for readability */
     }
 
-    .header-link {
-        font-size: 1.2rem;
+    .container, .about-section, .artist-profile-content {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .navbar, .director-container, .artist-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align for a cleaner look */
+    }
+
+    .navbar a, .director-profile, .artist-profile {
+        width: 100%; /* Full width for easier navigation and consistency */
+        text-align: center; /* Center-align text for better readability */
     }
 
     .hamburger-menu {
-        font-size: 1.2rem;
+        display: block; /* Ensure the hamburger menu is visible */
+    }
+
+    .header-link, .about-content, .accordion-button, .panel, .steplist li {
+        font-size: smaller; /* Adjust font size for space efficiency */
+    }
+
+    .header-banner, .faba-header-banner {
+        width: 80%; /* Adjust image sizes to fit screen width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .director-image, .artist-profile img {
+        width: 60px; /* Adjust image sizes for director and artist profiles */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .about-page-button, #popup-content, #close-popup {
+        font-size: smaller; /* Adjust button and popup font sizes for readability */
+    }
+
+    .social-links img {
+        width: 20px; /* Adjust social link icon sizes */
+    }
+}
+
+/* Additional media queries for even smaller screens */
+@media screen and (max-width: 480px) {
+    .director-profile, .artist-profile {
+        width: 100%; /* Full width for profile elements */
+    }
+
+    .header-link {
+        font-size: 1.2rem; /* Adjust header link size for better visibility */
     }
 
     .navbar {
-        width: 100%;
-        right: 0;
+        width: 100%; /* Full width navbar */
     }
 
-    .text-section {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box; 
-        text-align: justify;
-    }
-
-    .artist-name, .medium, .artist-info, .image-use {
-        font-size: 0.9em; 
-    }
-
-    .art-title {
-        font-size: h2;
+    .text-section, .artist-name, .medium, .artist-info, .image-use, .art-title {
+        font-size: 0.8em; /* Reduce font size for text elements */
     }
 
     .profile-button {
-        padding: 5px 20px; 
-        font-size: 0.8rem; 
+        padding: 5px 20px; /* Adjust padding for buttons */
+        font-size: 0.8rem; /* Reduce font size for buttons */
     }
 }
-
-
-@media (max-width: 480px) {
-    .director-profile {
-        width: 100%; 
-    }
-}
-
