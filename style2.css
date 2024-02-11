@@ -382,6 +382,12 @@ h1 span {
 }
 
 @media (max-width: 700px) {
+
+         .navbar {
+        width: 100%;
+        right: 0;
+    }
+    
     .flex-view .gallery {
         column-count: 1; 
     }
