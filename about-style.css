@@ -224,7 +224,7 @@ header {
 }
 
 .about-page-button, .about-page-button:visited {
-    color: #58565C; /* Light color */
+    color: #fffdf2; /* Light color */
     display: inline-flex;
     align-items: center;
     justify-content: center;
