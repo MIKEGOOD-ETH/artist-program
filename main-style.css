@@ -146,13 +146,12 @@ footer {
 }
 
 .sub-content-block {
-    max-width: 600px; /* Maximum width of the content block */
-    width: 100%; /* Make it responsive, taking up 100% of its parent's width up to 600px */
-    margin: auto; /* Center it within its parent */
-    text-align: left; /* Text alignment */
-    text-align: justify; /* Justify text for better readability */
-    padding: 20px; /* Add some padding inside the block */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    max-width: 600px; 
+    width: 100%; 
+    margin: auto; 
+    text-align: left; 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 .sub-content-block h1 {
