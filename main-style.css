@@ -47,7 +47,7 @@ footer {
     padding: 10px;
     background: #1F1D29;
     color: #fff;
-    -content: center;
+    justify-content: center;
 }
 
 .header-link, .header-link a:link, .header-link a:visited {
@@ -63,7 +63,7 @@ footer {
 .sticky-header-bar {
     margin: 0 auto;
     display: flex;
-    -content: space-between;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0 1rem;
@@ -72,7 +72,7 @@ footer {
 .sticky-header-bar-plain {
     margin: 0 auto;
     display: flex;
-    -content: right;
+    justify-content: right;
     align-items: center;
     width: 100%;
     padding: 0 1rem;
@@ -139,19 +139,20 @@ footer {
 
 .content-section {
     display: flex;
-    -content: center;
+    justify-content: center;
     padding: 20px;
     background-color: #EFF2FA;
 
 }
 
 .sub-content-block {
-    max-width: 600px; 
-    width: 100%; 
-    margin: auto; 
-    text-align: left; 
-    padding: 20px; 
-    box-sizing: border-box; 
+    max-width: 600px; /* Maximum width of the content block */
+    width: 100%; /* Make it responsive, taking up 100% of its parent's width up to 600px */
+    margin: auto; /* Center it within its parent */
+    text-align: left; /* Text alignment */
+    text-align: justify; /* Justify text for better readability */
+    padding: 20px; /* Add some padding inside the block */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .sub-content-block h1 {
