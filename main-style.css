@@ -88,7 +88,8 @@ footer {
 
 .hamburger-menu {
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 1em;
+    color: #898989;
 }
 
 .navbar {
@@ -146,12 +147,12 @@ footer {
 }
 
 .sub-content-block {
-    max-width: 600px; 
-    width: 100%; 
-    margin: auto; 
-    text-align: left; 
-    padding: 20px; 
-    box-sizing: border-box; 
+    max-width: 600px; /* Maximum width of the content block */
+    width: 100%; /* Make it responsive, taking up 100% of its parent's width up to 600px */
+    margin: auto; /* Center it within its parent */
+    text-align: left; /* Text alignment */
+    padding: 20px; /* Add some padding inside the block */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .sub-content-block h1 {
@@ -518,9 +519,6 @@ footer {
         font-size: 1.2rem;
     
 
-    .hamburger-menu {
-        font-size: 1.2rem;
-    }
     
     .content-section {
         padding: 10px; 
