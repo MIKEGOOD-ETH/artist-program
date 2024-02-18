@@ -185,16 +185,16 @@ footer {
 /* Director Profile section formatting */
 
 .profile-section {
-    background-color: #EFF2FA; 
-        display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Adjust gap as needed */
+    padding: 10px 0; /* Add some vertical padding */
     max-width: 600px;
     margin: auto;
 }
 
 .user-profile {
-    width: 30%; 
+    width: 100%; 
     margin-bottom: 20px;
     text-align: left;
 }
@@ -494,7 +494,15 @@ footer {
 @media (max-width: 700px) {
  
 
+.profile-section {
+        grid-template-columns: repeat(3, 1fr); /* Keep 3 columns layout for mobile */
+        gap: 10px; /* Optionally adjust gap for smaller screens */
+    }
 
+    .user-profile {
+        width: calc(33.333% - 10px); /* Adjust the width for 3 profiles per row, accounting for the gap */
+        margin-bottom: 10px; /* Ensure there's space between rows */
+    }
 
      .content-section, .sub-content-block {
         padding: 0 10px; /* Adjust padding for smaller screens */
@@ -534,7 +542,6 @@ footer {
         width: 80%;
         height: auto; 
     }
-
 
 
     .artwork-block {
