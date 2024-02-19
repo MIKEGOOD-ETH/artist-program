@@ -19,6 +19,7 @@ sup {
 
 header {
     font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
     position: sticky;
     top: 0;
     color: #1F1D29;
