@@ -17,6 +17,10 @@ a:link, a:visited {
     color: inherit; 
 }
 
+img {
+  max-width: 100%;
+}
+
 sup {
     font-size: .7rem;
 }
