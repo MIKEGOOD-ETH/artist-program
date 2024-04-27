@@ -382,6 +382,68 @@ footer {
 
 
 
+
+
+
+
+
+
+
+/* New styles for Artist Page */
+
+.artist-social-links {
+    display: flex;
+    justify-content: left;
+    gap: 6px;
+    margin: 5px 0;
+}
+
+.artist-social-links img {
+    width: 18px;  /* Small, icon-sized images */
+    height: auto;
+    vertical-align: middle;
+
+    margin: 10px 0;
+    padding: 0 6px;
+}
+
+.artist-program-round {
+
+    color: #666;
+    font-size: 1em;
+    text-align: left;
+    margin: 6px 0;
+    padding: 0 6px;
+
+
+}
+
+.view-artwork-link {
+    text-decoration: none;
+    color: #666;
+    padding: 5px 6px;
+    text-align: left;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+
+
+.gallery-image-container .artist-social-links a img {
+    width: 16px !important; /* Force width */
+    height: auto !important; /* Maintain aspect ratio */
+    display: inline-block; /* Adjust display property */
+}
+
+
+
+
+
+
+
+
+
 /* Formatting for PPP Page */
 
 .big-container {
